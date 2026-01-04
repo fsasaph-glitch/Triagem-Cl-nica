@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Responsivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            background: #1a1a1a;
+            padding: 16px;
+        }
+
+        /* Ajustes para mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            /* Garante que o widget não ultrapasse a tela */
+            #zv2-widget-container {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+        }
+
+        /* Ajustes para telas muito pequenas */
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.ZV2Widget = {
+            ChannelURL: "https://widget.endless.zaia.app/widget/channel/640a2df6-fbd3-483b-b9a9-e0ee39abafac?theme=dark",
+        };
+    </script>
+    <script src="https://widget.endless.zaia.app/script/widget-loader.js" async></script>
+</body>
+</html>
